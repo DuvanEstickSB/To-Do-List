@@ -37,6 +37,9 @@ function CrearTarea(tarea, index) {
     checkbox.addEventListener("click", () => {
         tarea.completado = checkbox.checked;
         SaveTareas();
+        setInterval(() => {
+            DelTarea(index);
+        }, 3000);
         span.classList.toggle("line-through");
         span.classList.toggle("text-green-500");
     });
